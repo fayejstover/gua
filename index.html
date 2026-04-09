@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guatemala Trip · May 2025</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="flag">🇬🇹</span>
+      Guatemala · May 2025
+    </div>
+    <div class="topbar-meta">
+      <span class="topbar-badge">2 travelers</span>
+      <span class="topbar-total">All-in: <strong id="grand-total-hero">—</strong></span>
+    </div>
+  </header>
+
+  <nav class="nav-wrap">
+    <ul class="nav-tabs" role="list">
+      <li><a class="nav-tab active" href="#day1">Mon 5/11</a></li>
+      <li><a class="nav-tab" href="#day2">Tue 5/12</a></li>
+      <li><a class="nav-tab" href="#day3">Wed 5/13</a></li>
+      <li><a class="nav-tab" href="#day4">Thu 5/14</a></li>
+      <li><a class="nav-tab" href="#day5">Fri 5/15</a></li>
+      <li><a class="nav-tab" href="#costs">Costs</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay" onclick="closePicker()"></div>
+  <div class="slide-over" id="slide-over" role="dialog" aria-label="Choose accommodation">
+    <div class="slide-header">
+      <div>
+        <div class="slide-eyebrow" id="slide-eyebrow"></div>
+        <div class="slide-title" id="slide-title"></div>
+      </div>
+      <button class="slide-close" onclick="closePicker()">✕</button>
+    </div>
+    <div class="slide-body" id="slide-body"></div>
+  </div>
+
+  <main class="page">
+
+    <div class="hero reveal">
+      <div class="hero-label">Travel Itinerary · Per person costs</div>
+      <div class="hero-title">Guatemala <span>2025</span></div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-label">Dates</div>
+          <div class="hero-stat-val">May 11–15</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Travelers</div>
+          <div class="hero-stat-val">2 people</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">All-in / person</div>
+          <div class="hero-stat-val" id="grand-total">—</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Route</div>
+          <div class="hero-stat-val">Antigua · Acatenango · Atitlán</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="days-container" style="display:flex;flex-direction:column;gap:var(--p-space-6)"></div>
+
+    <section id="costs">
+      <div class="section-heading reveal" style="margin-bottom:var(--p-space-4)">
+        <h2>Cost Summary</h2>
+        <p>All amounts per person · shared costs already split</p>
+      </div>
+
+      <div class="summary-grid">
+        <div class="cost-section reveal">
+          <div class="cost-section-header">
+            <div class="cost-section-label"><span class="icon">🏠</span> Accommodation</div>
+            <div class="cost-section-total" id="sum-accom-total">—</div>
+          </div>
+          <div class="cost-rows" id="sum-accom-rows"></div>
+        </div>
+        <div class="cost-section reveal">
+          <div class="cost-section-header">
+            <div class="cost-section-label"><span class="icon">🧗</span> Activities</div>
+            <div class="cost-section-total" id="sum-act-total">—</div>
+          </div>
+          <div class="cost-rows" id="sum-act-rows"></div>
+        </div>
+        <div class="cost-section reveal">
+          <div class="cost-section-header">
+            <div class="cost-section-label"><span class="icon">🚌</span> Transportation</div>
+            <div class="cost-section-total" id="sum-trans-total">—</div>
+          </div>
+          <div class="cost-rows" id="sum-trans-rows"></div>
+        </div>
+        <div class="cost-section reveal">
+          <div class="cost-section-header">
+            <div class="cost-section-label"><span class="icon">✈️</span> Flights</div>
+            <div class="cost-section-total" id="sum-flights-total">—</div>
+          </div>
+          <div class="cost-rows">
+            <div class="cost-row">
+              <span class="cost-row-label">Round-trip flight</span>
+              <span class="cost-row-amount">$450</span>
+            </div>
+            <div class="cost-row">
+              <span class="cost-row-label" style="color:var(--p-text-disabled);font-size:12px">Exact fare TBD</span>
+              <span class="cost-row-amount" style="color:var(--p-text-disabled);font-size:12px">booked separately</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="total-box reveal" style="margin-top:var(--p-space-4)">
+        <div>
+          <div class="total-box-label">Total per person</div>
+          <div class="total-box-amount" id="grand-total-box">—</div>
+          <div class="total-box-sub">5 days · all costs included</div>
+        </div>
+        <div class="total-box-right">
+          <div class="total-box-label">Includes</div>
+          <div class="total-box-sub" id="grand-accom" style="color:rgba(255,255,255,.8);font-size:13px">—</div>
+          <div class="total-box-sub">+ activities · transport · flights</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
